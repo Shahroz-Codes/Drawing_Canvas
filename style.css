@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url(assets/top-view-colourful-crayons-pencils.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    padding: 50px 25px 25px 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Tool_Box {
+    padding: 15px;
+    background-color: rgb(122, 147, 172);
+    border-radius: 7px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    left: 60px;
+    top: 54px;
+}
+
+.row {
+
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}
+
+.row ul {
+    list-style: none;
+}
+
+.row ul h3 {
+    margin: 5px 0px;
+}
+
+.row ul .option {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    align-items: center;
+    padding: 5px 0px;
+}
+
+.row ul li:hover {
+    transform: scale(1.07);
+    transition: .08s;
+    cursor: pointer;
+
+}
+
+.row ul li *:hover {
+    cursor: pointer;
+}
+
+.row button {
+    padding: 8px;
+    border-radius: 20px;
+    background-color: rgb(79, 86, 94);
+    color: aliceblue;
+    transition: .5s;
+}
+
+.row button:hover {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 7px 5px 5px aqua;
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+#fill {
+    height: 15px;
+    width: 15px;
+}
+
+#Size_Slider {
+    height: 4px;
+    margin: 5px 0px;
+}
+
+.drawing_board {
+    background: white;
+    border: 5px solid rgb(78, 76, 76);
+    border-radius: 7px;
+
+    width: 800px;
+    height: 430px;
+}
+
+.Color_options {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Color_options>li {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background: red;
+    position: relative;
+}
+
+.Color_Option:hover:before{
+    position: absolute;
+    content: "";
+    /* top: 50%;
+    left: 50%; */
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid white;
+    transform: translate(13%, 13%);
+}
+.selected:before {
+    position: absolute;
+    content: "";
+    /* top: 50%;
+    left: 50%; */
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid gray;
+    transform: translate(13%, 13%);
+}
+.Color_Option:nth-child(2) {
+    background-color: white;
+}
+
+.Color_Option:nth-child(1) {
+    background-color: black;
+}
+
+.Color_Option:nth-child(3) {
+    background-color: green;
+}
+
+.Color_Option:nth-child(4) {
+    background-color: red;
+}
+
+.Color_Option:nth-child(5) {
+    background-color: skyblue;
+}
+
+#color_picker {
+    opacity: 0;
+    height: 20px;
+    width: 20px;
+}
+
+canvas {
+    height: 100%;
+    width: 100%;
+}
+
+.active {
+    color: white;
+}
